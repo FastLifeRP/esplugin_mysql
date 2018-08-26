@@ -18,13 +18,16 @@ USE `essentialmode`;
 
 -- Dumping structure for table essentialmode.users
 CREATE TABLE IF NOT EXISTS `users` (
-  `identifier` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL,
-  `license` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `identifier` varchar(50) DEFAULT NULL,
+  `license` varchar(50) DEFAULT NULL,
   `money` int(11) DEFAULT NULL,
   `bank` int(11) DEFAULT NULL,
   `permission_level` int(11) DEFAULT NULL,
-  `group` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+  `group` varchar(50) DEFAULT NULL,
+
+  PRIMARY KEY(`id`)
+) ENGINE=InnoDB DEFAULT;
 
 -- Data exporting was unselected.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
